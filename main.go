@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"time"
 
 	"github.com/urfave/cli/v2"
@@ -11,8 +12,8 @@ func main() {
 	app := &cli.App{
 		Name:  "isodate",
 		Usage: "Show the current time in RFC3339",
-		Flags: []Flag{
-			&StringFlag{
+		Flags: []cli.Flag{
+			&cli.StringFlag{
 				Name:    "time_zone",
 				Aliases: []string{"tz"},
 			},
